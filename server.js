@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var express = require('express');
 var app = express();
-var url = "mongodb://localhost:27017/mongodb";
+var url = "mongodb://tienkhoi:thanhnga2391@ds153765.mlab.com:53765/urlshortener266";
 var port = process.env.PORT || 8080;
 
 mongoose.connect(url);
@@ -43,7 +43,6 @@ app.get("/:id",function(req,res){
                 error: "Url is not available"
              })
          }
-        
         res.redirect(urlObj.original_url)
     })
 })
